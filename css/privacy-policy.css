@@ -1,5 +1,6 @@
 .pp-body{
   background-color: #E9EBEB;
+  height: auto;
 }
 #pp-main{
   
@@ -15,3 +16,4 @@
 .pp-sub-text{
   color: rgb(3, 86, 114);
 }
+
