@@ -10,18 +10,8 @@
       <feComposite operator="in" in2="blur"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <clipPath id="clip-path">
-      <rect id="mask" width="420" height="10" transform="translate(1409 641)" fill="none"/>
-    </clipPath>
   </defs>
-  <g id="YO_YAH" data-name="YO YAH" transform="translate(15 20)">
-    <g transform="matrix(1, 0, 0, 1, -15, -20)" filter="url(#YO_AH)">
-      <rect id="YO_AH-2" data-name="YO AH" width="400" height="400" transform="translate(25 20)" fill="url(#pattern)"/>
-    </g>
-    <g id="Mask_Group_9" data-name="Mask Group 9" transform="translate(-1409 -226)" clip-path="url(#clip-path)">
-      <rect id="YO_AH_ol" data-name="YO AH ol" width="400" height="200" transform="translate(1419 426)" fill="#e9ebeb"/>
-      <text id="YO_YAH-2" data-name="YO YAH" transform="translate(1459 494)" fill="#83743b" font-size="28" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">YO YAH</tspan></text>
-      <text id="Click_on_the_image_to_see_the_full_size._" data-name="Click on the image to see the full size. " transform="translate(1459 518)" fill="#114d59" font-size="20" font-family="ArialMT, Arial"><tspan x="0" y="18">Click on the image to see the full </tspan><tspan x="0" y="41">size. </tspan></text>
-    </g>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#YO_AH)">
+    <rect id="YO_AH-2" data-name="YO AH" width="400" height="400" transform="translate(25 20)" fill="url(#pattern)"/>
   </g>
 </svg>
