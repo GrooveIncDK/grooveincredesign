@@ -9,7 +9,9 @@
   --i7-y: 2830;
   --i7-w: 520;
   --i7-h: 370;
+  --svc-arrow-shift-y: -10px;
 }
+
 
 #services .section-title{
   margin: 0;
@@ -179,14 +181,46 @@
   position: absolute;
   left: 20px;
   bottom: 4px;
-  font-size: calc(24px * 1.7);
+  width: calc(72px * 1.7);
+  height: calc(18px * 1.7);
   color: #114D59;
   transition: color .2s ease;
+  transform: translateY(var(--svc-arrow-shift-y));
 }
 
 #services .svc-card:hover .svc-card__arrow{
   color: #83743B;
 }
+
+#services .svc-card__arrow{
+  position: absolute;
+  left: 20px;
+  bottom: 4px;
+  width: calc(72px * 1.7);
+  height: calc(18px * 1.7);
+  color: #114D59;
+  transition: color .2s ease;
+}
+
+#services .svc-card__arrow svg{
+  width: 40%;
+  height: 40%;
+  shape-rendering: geometricPrecision;
+}
+
+#services .svc-card__arrow line{
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: butt;
+  stroke-linejoin: miter;
+  fill: none;
+}
+
+#services .svc-card__arrow polygon{
+  fill: currentColor;
+  stroke: none;
+}
+
 
 #services .svc-card.i1[aria-expanded="false"] .svc-card__lead{
   display: -webkit-box;
@@ -194,6 +228,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 
 #services .svc-card.i4[aria-expanded="false"] .svc-card__lead{
   display: -webkit-box;
