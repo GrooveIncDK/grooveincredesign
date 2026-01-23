@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Groove Inc — Main</title>
 
-  <!-- Bootstrap 5 -->
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -50,10 +49,56 @@
     <h2 class="section-title">Services</h2>
 
     <div class="svc-canvas">
-      <img class="svc-img i1" src="assets/services/360 Branding.svg" alt="360 Branding" />
+      <button class="svc-card i1" type="button" aria-expanded="false">
+        <div class="svc-card__head">
+          <h3 class="svc-card__title">360 Branding</h3>
+          <span class="svc-card__rule"></span>
+        </div>
+
+        <div class="svc-card__body">
+          <p class="svc-card__lead">
+            What is your level of ambition? Are you constantly seeking improvement, or are you content with your current market position?
+          </p>
+
+          <div class="svc-card__more">
+            <p class="svc-card__text">
+              We deeply understand the connection between passion, goals, customer relationships, loyalty, and trust. Our aim is to effectively communicate your message and brand to your audience in a strategic and refined manner. We take into account your company’s values, culture, ownership, image, and style as we support both your growth and that of your customers.
+            </p>
+            <p class="svc-card__tagline">– from concept to targeted implementation.</p>
+          </div>
+        </div>
+
+        <span class="svc-card__arrow" aria-hidden="true">→</span>
+      </button>
+
       <img class="svc-img i2" src="assets/services/image 2.svg" alt="Service visual 2" />
       <img class="svc-img i3" src="assets/services/image 1.svg" alt="Service visual 3" />
-      <img class="svc-img i4" src="assets/services/Modern Marketing.svg" alt="Modern Marketing" />
+
+      <button class="svc-card i4" type="button" aria-expanded="false">
+        <div class="svc-card__head">
+          <h3 class="svc-card__title">Modern Marketing</h3>
+          <span class="svc-card__rule"></span>
+        </div>
+
+        <div class="svc-card__body">
+          <p class="svc-card__lead">
+            The most effective solutions arise from thoughtful contemplation of a problem.
+          </p>
+
+          <div class="svc-card__more">
+            <p class="svc-card__text">
+              To strengthen your position, it's essential to honestly acknowledge your weaknesses. Our team takes the necessary steps and carefully plans the actions needed to reach your target audience.
+            </p>
+            <ul class="svc-card__list">
+              <li>We do not use tools.</li>
+              <li>We use experience.</li>
+            </ul>
+          </div>
+        </div>
+
+        <span class="svc-card__arrow" aria-hidden="true">→</span>
+      </button>
+
       <img class="svc-img i5" src="assets/services/image 4.svg" alt="Service visual 5" />
       <img class="svc-img i6" src="assets/services/image 3.svg" alt="Service visual 6" />
       <img class="svc-img i7" src="assets/services/Rectangle 79.svg" alt="Service visual 7" />
@@ -88,6 +133,13 @@
     }
     setActive('#services');
     window.addEventListener('hashchange', () => setActive(location.hash));
+
+    document.querySelectorAll('#services .svc-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const expanded = card.getAttribute('aria-expanded') === 'true';
+        card.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      });
+    });
   </script>
 </body>
 </html>
